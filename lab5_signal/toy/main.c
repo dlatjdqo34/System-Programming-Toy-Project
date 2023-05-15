@@ -26,7 +26,6 @@ int main()
     struct sigaction sa;
 
     /* 여기서 SIGCHLD 시그널  등록 */
-
     if(signal(SIGCHLD, sigchldHandler) == SIG_ERR) {
         fprintf(stderr, "signal registration error\n");
         exit(EXIT_FAILURE);
