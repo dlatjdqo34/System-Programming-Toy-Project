@@ -60,9 +60,14 @@ void segfault_handler(int sig_num, siginfo_t * info, void * ucontext) {
 
 int input()
 {
+    struct sigaction sa;
+
     printf("나 input 프로세스!\n");
     /* 여기서 SIGSEGV 시그널 등록 */
-    if(signal(SIGSEGV, segfault_handler)==SIG_ERR) {
+    sa.sa_flags = SA_SIGINFO;
+    sa.sa_sigaction = segfault_handler;
+    sigemptyset(&sa.sa_mask);
+    if(sigaction(SIGSEGV, &sa, NULL) == -1) {
         fprintf(stderr, "signal registration error\n");
         exit(EXIT_FAILURE);
     }

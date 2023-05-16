@@ -302,7 +302,9 @@
         "type": "cppdbg",
         "request": "launch",
         "program": "${workspaceFolder}/signals/t_kill",
-        "args": [],
+        "args": [
+          "0", "9"
+        ],
         "stopAtEntry": true,
         "cwd": "${workspaceFolder}",
         "environment": [],
