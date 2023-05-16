@@ -315,6 +315,44 @@
             "ignoreFailures": true
           }
         ],
+      },
+      {
+        "name": "thread_incr",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/threads/thread_incr",
+        "args": [],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
+      },
+      {
+        "name": "thread_incr_mutex",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/threads/thread_incr_mutex",
+        "args": [],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
       }
     ]
 }
