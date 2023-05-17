@@ -391,6 +391,71 @@
             "ignoreFailures": true
           }
         ],
+      },
+      {
+        "name": "pmsg_create",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/pmsg/pmsg_create",
+        "args": [ 
+          "-c", 
+          "/test",
+        ],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
+      },
+      {
+        "name": "pmsg_send",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/pmsg/pmsg_send",
+        "args": [ 
+          "/test", 
+          "abcdefg",
+        ],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
+      },
+      {
+        "name": "pmsg_receive",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/pmsg/pmsg_receive",
+        "args": [ 
+          "/test"
+        ],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
       }
     ]
 }
