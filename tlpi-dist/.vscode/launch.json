@@ -605,6 +605,27 @@
             "ignoreFailures": true
           }
         ],
+      },
+      {
+        "name": "demo_inotify",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/inotify/demo_inotify",
+        "args": [ 
+          "/home/lsb/1.system/tlpi-dist/inotify/test"
+        ],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
       }
     ]
 }
