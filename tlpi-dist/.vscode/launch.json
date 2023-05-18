@@ -1,6 +1,7 @@
 {
     "version": "0.2.0",
     "configurations": [
+
       {
         "name": "copy",
         "type": "cppdbg",
@@ -613,6 +614,27 @@
         "program": "${workspaceFolder}/inotify/demo_inotify",
         "args": [ 
           "/home/lsb/1.system/tlpi-dist/inotify/test"
+        ],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
+      },
+      {
+        "name": "epoll_input",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/altio/epoll_input",
+        "args": [ 
+          "altio/p", "altio/q"
         ],
         "stopAtEntry": true,
         "cwd": "${workspaceFolder}",
