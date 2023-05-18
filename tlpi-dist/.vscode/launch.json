@@ -563,6 +563,48 @@
             "ignoreFailures": true
           }
         ],
+      },
+      {
+        "name": "mmcat",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/mmap/mmcat",
+        "args": [ 
+          "Makefile"
+        ],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
+      },
+      {
+        "name": "t_mmap",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/mmap/t_mmap",
+        "args": [ 
+          "a.txt"
+        ],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
       }
     ]
 }
