@@ -648,6 +648,27 @@
             "ignoreFailures": true
           }
         ],
+      },
+      {
+        "name": "dynload",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/shlibs/dynload",
+        "args": [ 
+          "shlibs/libdemo.so.1.0.1", "x2"
+        ],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
       }
     ]
 }
