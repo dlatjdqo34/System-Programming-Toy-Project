@@ -18,6 +18,8 @@ static int child_web_server(void *arg)
 {
     printf("Clone Web Server Succeed!\n");
 
+    printf("[%d] Current namespace, Parent PID : %d\n", getpid(), getppid());
+
     if (execl("/usr/local/bin/filebrowser", "filebrowser", "-p", "8282",
               (char *)NULL)) {
         printf("execfailed\n");
